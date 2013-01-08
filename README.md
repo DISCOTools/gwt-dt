@@ -1,7 +1,7 @@
 dt-gwt
 ======
 
-This projects contains parent [POM](http://maven.apache.org/pom.html) for all DISCOTools GWT projects. 
+This projects contains the parent [POM](http://maven.apache.org/pom.html) for all DISCOTools GWT projects. 
 
 **Goals**
 * POM shared by all GWT projects
