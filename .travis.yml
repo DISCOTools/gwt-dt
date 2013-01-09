@@ -5,7 +5,7 @@ jdk:
 before_script:
   # Create settings.xml in 'src' directory
   - cd src
-  - python ../build/settings.py
+  - python build/settings.py
 
 script: 
 
