@@ -20,6 +20,6 @@ notifications:
 env:
   global:
     # Encrypted username
-    - secure: "AOqBZ5c1y9fTEiWXFW4lfbGu3liX2AmLeQ8pQG52GQZq9gexMfTdH6uT2C7/\n+7STnohAL4TDsjr4E48L/wCfoyQKm/DQDQKoJJjJk9ZH8BUtHS4zp8ek34py\nJJz8HKWB6+n5IPi6hP75auGy+meZVQqqqBOg9rNGMc5pYM3orys="
+    - secure: "HturNUAXXdCeIF74odVGa58P55zrjfEEfa5m/aeHsi2e3/uCC4bdGiBl1sFS\njZf9/RpCeE03ZnGDaPBeNTZpC9c/sjZ3LRU6ic6wepxhyPYtNfPIaKSl2jp5\nlZSEuoSIQx8wjYpoaSI3E7TAKXZmZnC0DOMpQD6axmshNluhjKA="
     # Encrypted password
-    - secure: "Wsz2p3wbXp0Y/yZ5vjR74nLbEfFb40mzP3Qzhyni89np6XLoOwx/K8eAQdTM\nJsSvSgvUVPR/xLzaKn7aX6UIFoGK04RAb0bg9cfPYbKdmIsjaf3XJRVrXHce\newQxIU+LszShHYd4otKzpuCa16Ww/WEtXdGJ8862XoGTolCaT7A="
+    - secure: "DUK56l7aQX1nFi5CCNmeCXVZ1vuB/OIa9QtrRWrA6viLIFzlsVZ567jC6Efi\nZSIZcWdt/BiGn+PLO+yfQJF/Uc+0ytvien24KSxGUnE3y0zxYrdy4KRjvrt2\nm2zB4YT+UdDd+xxUTZ0NgeytnYZcbr/fEPSTscM7BBEQ+nhLB2k="
