@@ -91,32 +91,30 @@
 		<!-- ==================================== -->
 		<!-- Enable gwt-dev dependency in Eclipse -->
 		<!-- ==================================== -->
-		<profiles>
-			<!-- Component gwt-dev should not be added manually. Normally, gwt-maven-plugin 
-				adds gwt-dev automatically, but current lifecycle-mapping for gwt-maven-plugin 
-				prevent this from happening, because Eclipse is not able to handle it. Modules 
-				which depend on gwt-dev need to add a copy of this profile to resolve missing 
-				imports in Eclipse. See gwtl-core/pom.xml for an example on how gwt-dev is 
-				added. -->
-			<profile>
-				<id>m2e</id>
-				<activation>
-					<property>
-						<name>m2e.version</name>
-					</property>
-				</activation>
-				<dependencyManagement>
-					<dependencies>
-						<!-- Google Window Toolkit (GWT) -->
-						<dependency>
-							<groupId>com.google.gwt</groupId>
-							<artifactId>gwt-dev</artifactId>
-							<version>2.5.0</version>
-						</dependency>
-					</dependencies>
-				</dependencyManagement>
-			</profile>
-		</profiles>
+		<!-- Component gwt-dev should not be added manually. Normally, gwt-maven-plugin 
+			adds gwt-dev automatically, but current lifecycle-mapping for gwt-maven-plugin 
+			prevent this from happening, because Eclipse is not able to handle it. Modules 
+			which depend on gwt-dev need to add a copy of this profile to resolve missing 
+			imports in Eclipse. See gwtl-core/pom.xml for an example on how gwt-dev is 
+			added. -->
+		<profile>
+			<id>m2e</id>
+			<activation>
+				<property>
+					<name>m2e.version</name>
+				</property>
+			</activation>
+			<dependencyManagement>
+				<dependencies>
+					<!-- Google Window Toolkit (GWT) -->
+					<dependency>
+						<groupId>com.google.gwt</groupId>
+						<artifactId>gwt-dev</artifactId>
+						<version>2.5.0</version>
+					</dependency>
+				</dependencies>
+			</dependencyManagement>
+		</profile>
 	</profiles>
 
 	<dependencyManagement>
