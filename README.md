@@ -1,6 +1,8 @@
 dt-gwt
 ======
 
+[![Build Status](https://secure.travis-ci.org/DISCOTools/dt-gwt.png)](http://travis-ci.org/DISCOTools/dt-gwt)
+
 This projects contains the parent [POM](http://maven.apache.org/pom.html) for all DISCOTools GWT projects. 
 
 **Goals**
