@@ -14,15 +14,14 @@
 	<version>0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<name>dt-gwt</name>
-	<url>www.discotools.org/dt-gwt</url>	
+	<url>www.discotools.org/dt-gwt</url>
 	<description>This projects contains the parent POM for all DISCOTools GWT projects.</description>
+	<inceptionYear>2012</inceptionYear>
 
 	<organization>
 		<name>DISCOTools</name>
 		<url>www.discotools.org</url>
 	</organization>
-
-	<inceptionYear>2012</inceptionYear>
 
 	<!-- Licenses -->
 	<licenses>
@@ -89,6 +88,35 @@
 				<compile.optimization.level>9</compile.optimization.level>
 			</properties>
 		</profile>
+		<!-- ==================================== -->
+		<!-- Enable gwt-dev dependency in Eclipse -->
+		<!-- ==================================== -->
+		<profiles>
+			<!-- Component gwt-dev should not be added manually. Normally, gwt-maven-plugin 
+				adds gwt-dev automatically, but current lifecycle-mapping for gwt-maven-plugin 
+				prevent this from happening, because Eclipse is not able to handle it. Modules 
+				which depend on gwt-dev need to add a copy of this profile to resolve missing 
+				imports in Eclipse. See gwtl-core/pom.xml for an example on how gwt-dev is 
+				added. -->
+			<profile>
+				<id>m2e</id>
+				<activation>
+					<property>
+						<name>m2e.version</name>
+					</property>
+				</activation>
+				<dependencyManagement>
+					<dependencies>
+						<!-- Google Window Toolkit (GWT) -->
+						<dependency>
+							<groupId>com.google.gwt</groupId>
+							<artifactId>gwt-dev</artifactId>
+							<version>2.5.0</version>
+						</dependency>
+					</dependencies>
+				</dependencyManagement>
+			</profile>
+		</profiles>
 	</profiles>
 
 	<dependencyManagement>
@@ -102,11 +130,6 @@
 			<dependency>
 				<groupId>com.google.gwt</groupId>
 				<artifactId>gwt-codeserver</artifactId>
-				<version>${gwt.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.google.gwt</groupId>
-				<artifactId>gwt-dev</artifactId>
 				<version>${gwt.version}</version>
 			</dependency>
 
@@ -210,7 +233,7 @@
 				<plugin>
 					<groupId>org.codehaus.mojo</groupId>
 					<artifactId>gwt-maven-plugin</artifactId>
-					<version>2.5.0</version>
+					<version>${gwt.version}</version>
 					<executions>
 						<!-- Copy deps into projects before packaging -->
 						<execution>
@@ -260,7 +283,7 @@
 				<!-- Maven WAR packaging plugin -->
 				<plugin>
 					<artifactId>maven-war-plugin</artifactId>
-					<version>2.3</version>					
+					<version>2.3</version>
 				</plugin>
 
 				<!-- Maven unit testing plugin -->
@@ -411,7 +434,7 @@
 		<!-- Plugins activated for all projects -->
 		<plugins>
 
-			<!-- Ensure that all projects use Java 6-->
+			<!-- Ensure that all projects use Java 6 -->
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.5.1</version>
